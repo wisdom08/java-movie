@@ -5,7 +5,12 @@ public class TicketSeller {
         this.ticketOffice = ticketOffice;
     }
 
-    public TicketOffice getTicketOffice() {
+   /* public TicketOffice getTicketOffice() {
         return ticketOffice;
+    }*/
+
+    public void sellTo(Audience audience) {
+        ticketOffice.plusAmount(audience.buy(ticketOffice.getTicket()));
+
     }
 }
